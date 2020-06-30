@@ -307,6 +307,12 @@ declare class BundleContext {
   fetch(callback?: (error: Error | null, items: BundleInstance) => any): Promise<BundleInstance>;
   itemAssignments: ItemAssignmentListInstance;
   /**
+   * remove a BundleInstance
+   *
+   * @param callback - Callback to handle processed record
+   */
+  remove(callback?: (error: Error | null, items: BundleInstance) => any): Promise<boolean>;
+  /**
    * Provide a user-friendly representation
    */
   toJSON(): any;
@@ -358,6 +364,12 @@ declare class BundleInstance extends SerializableClass {
   itemAssignments(): ItemAssignmentListInstance;
   links: string;
   regulationSid: string;
+  /**
+   * remove a BundleInstance
+   *
+   * @param callback - Callback to handle processed record
+   */
+  remove(callback?: (error: Error | null, items: BundleInstance) => any): Promise<boolean>;
   sid: string;
   status: BundleStatus;
   statusCallback: string;

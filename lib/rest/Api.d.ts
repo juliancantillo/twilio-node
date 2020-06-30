@@ -24,7 +24,6 @@ import { MessageListInstance } from './api/v2010/account/message';
 import { NewKeyListInstance } from './api/v2010/account/newKey';
 import { NewSigningKeyListInstance } from './api/v2010/account/newSigningKey';
 import { NotificationListInstance } from './api/v2010/account/notification';
-import { OutgoingCallerIdListInstance } from './api/v2010/account/outgoingCallerId';
 import { QueueListInstance } from './api/v2010/account/queue';
 import { RecordingListInstance } from './api/v2010/account/recording';
 import { ShortCodeListInstance } from './api/v2010/account/shortCode';
@@ -60,7 +59,6 @@ declare class Api extends Domain {
   readonly newKeys: NewKeyListInstance;
   readonly newSigningKeys: NewSigningKeyListInstance;
   readonly notifications: NotificationListInstance;
-  readonly outgoingCallerIds: OutgoingCallerIdListInstance;
   readonly queues: QueueListInstance;
   readonly recordings: RecordingListInstance;
   readonly shortCodes: ShortCodeListInstance;

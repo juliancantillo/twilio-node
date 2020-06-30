@@ -24,7 +24,6 @@ import { MessageListInstance } from './v2010/account/message';
 import { NewKeyListInstance } from './v2010/account/newKey';
 import { NewSigningKeyListInstance } from './v2010/account/newSigningKey';
 import { NotificationListInstance } from './v2010/account/notification';
-import { OutgoingCallerIdListInstance } from './v2010/account/outgoingCallerId';
 import { QueueListInstance } from './v2010/account/queue';
 import { RecordingListInstance } from './v2010/account/recording';
 import { ShortCodeListInstance } from './v2010/account/shortCode';
@@ -60,7 +59,6 @@ declare class V2010 extends Version {
   readonly newKeys: NewKeyListInstance;
   readonly newSigningKeys: NewSigningKeyListInstance;
   readonly notifications: NotificationListInstance;
-  readonly outgoingCallerIds: OutgoingCallerIdListInstance;
   readonly queues: QueueListInstance;
   readonly recordings: RecordingListInstance;
   readonly shortCodes: ShortCodeListInstance;

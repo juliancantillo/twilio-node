@@ -75,7 +75,6 @@ declare class Twilio {
   notifications: (typeof Api.prototype.account.notifications);
   notify: Notify;
   numbers: Numbers;
-  outgoingCallerIds: (typeof Api.prototype.account.outgoingCallerIds);
   preview: Preview;
   pricing: Pricing;
   proxy: Proxy;

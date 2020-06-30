@@ -36,8 +36,6 @@ import { NewSigningKeyList } from './account/newSigningKey';
 import { NewSigningKeyListInstance } from './account/newSigningKey';
 import { NotificationList } from './account/notification';
 import { NotificationListInstance } from './account/notification';
-import { OutgoingCallerIdList } from './account/outgoingCallerId';
-import { OutgoingCallerIdListInstance } from './account/outgoingCallerId';
 import { QueueList } from './account/queue';
 import { QueueListInstance } from './account/queue';
 import { RecordingList } from './account/recording';
@@ -333,7 +331,6 @@ declare class AccountContext {
   newKeys: NewKeyListInstance;
   newSigningKeys: NewSigningKeyListInstance;
   notifications: NotificationListInstance;
-  outgoingCallerIds: OutgoingCallerIdListInstance;
   queues: QueueListInstance;
   recordings: RecordingListInstance;
   shortCodes: ShortCodeListInstance;
@@ -440,10 +437,6 @@ declare class AccountInstance extends SerializableClass {
    * Access the notifications
    */
   notifications(): NotificationListInstance;
-  /**
-   * Access the outgoingCallerIds
-   */
-  outgoingCallerIds(): OutgoingCallerIdListInstance;
   ownerAccountSid: string;
   /**
    * Access the queues

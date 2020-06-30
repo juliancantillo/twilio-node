@@ -8,6 +8,8 @@
 import Page = require('../../../../base/Page');
 import Response = require('../../../../http/response');
 import V1 = require('../../V1');
+import { DeliveryReceiptList } from './message/deliveryReceipt';
+import { DeliveryReceiptListInstance } from './message/deliveryReceipt';
 import { SerializableClass } from '../../../../interfaces';
 
 type MessageWebhookEnabledType = 'true'|'false';
@@ -267,6 +269,7 @@ interface MessageResource {
   date_created: Date;
   date_updated: Date;
   index: number;
+  links: string;
   media: object[];
   participant_sid: string;
   sid: string;
@@ -291,6 +294,7 @@ declare class MessageContext {
    */
   constructor(version: V1, conversationSid: string, sid: string);
 
+  deliveryReceipts: DeliveryReceiptListInstance;
   /**
    * fetch a MessageInstance
    *
@@ -353,12 +357,17 @@ declare class MessageInstance extends SerializableClass {
   dateCreated: Date;
   dateUpdated: Date;
   /**
+   * Access the deliveryReceipts
+   */
+  deliveryReceipts(): DeliveryReceiptListInstance;
+  /**
    * fetch a MessageInstance
    *
    * @param callback - Callback to handle processed record
    */
   fetch(callback?: (error: Error | null, items: MessageInstance) => any): Promise<MessageInstance>;
   index: number;
+  links: string;
   media: object[];
   participantSid: string;
   /**
